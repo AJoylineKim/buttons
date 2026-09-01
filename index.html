@@ -1,0 +1,63 @@
+<html lang=en>
+<head>
+  
+</head>
+
+  <body>
+    
+<button id="minusbutton">Subtrack From Score</button>
+  <div id="container3"></div>
+
+<button id="tenbutton">+10 To Score</button>
+  <div id="container4"></div>
+
+<button id="resetbutton">Reset Score</button>
+  <div id="container2"></div>
+
+    
+<script>
+  
+  let score = 0;
+const button = document.getElementById("mybutton");
+const container = document.getElementById("container");
+
+button.addEventListener("click", function(){ 
+  score= score +1;
+ container.textContent = score;
+});
+
+
+const resetbutton = document.getElementById("resetbutton");
+const container2 = document.getElementById("container2");
+
+resetbutton.addEventListener ("click", function(){ 
+  score= 0;
+ container.textContent = score;
+});
+
+
+const minusbuttom = document.getElementById("minusbutton");
+const container3 = document.getElementById("container3");
+
+minusbutton.addEventListener ("click", function(){ 
+  score= score -1;
+ container.textContent = score;
+});
+
+const tenbutton = document.getElementById("tenbutton");
+const container4 = document.getElementById("container4");
+
+tenbutton.addEventListener ("click", function(){ 
+  score= score +10;
+ container.textContent = score;
+});
+
+</script>
+    
+  </body>
+
+
+  
+
+  
+</html>
