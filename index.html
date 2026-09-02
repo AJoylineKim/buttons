@@ -17,6 +17,14 @@
 <button id="resetbutton">Reset Score</button>
   <div id="container2"></div>
 
+<h1>What Animal Are you?</h1>
+
+<button id="rndmbutton">Random Animal</button>
+<div id="container5"></div>
+
+<h4> Your Animal is...</h4>
+
+
     
 <script>
   
@@ -55,6 +63,21 @@ tenbutton.addEventListener ("click", function(){
  container.textContent = score;
 });
 
+
+
+let Animals = ["Fish","Turtle","Cat","Dog","Goat"]
+
+const rndmbutton = document.querySelector("#rndmbutton");
+let container5 = document.getElementById("container5");
+
+
+  // Let rndmbutton listen for mouseover
+    rndmbutton.addEventListener ("click", (event) => { 
+      let randomAnimals = Math.floor(Math.random() * Animals.length);
+     container5.textContent = Animals [randomAnimals];
+});
+
+  
 </script>
     
   </body>
