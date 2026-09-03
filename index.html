@@ -25,6 +25,26 @@
 <h4> Your Animal is...</h4>
 
 
+
+
+
+
+<h2>Dog Walk Simulator</h2>
+<p> Choose where to walk your dog!<p>
+
+
+<button id="school">Walk Dog to School</button>
+  <div id="box"></div>
+
+<button id="postOffice">Walk Dog to Post Office</button>
+  <div id="box2"></div>
+
+<button id="hospital">Walk Dog to Hospital</button>
+  <div id="box3"></div>
+
+  <p id="result"></p>
+
+    
     
 <script>
   
@@ -77,7 +97,38 @@ let container5 = document.getElementById("container5");
      container5.textContent = Animals [randomAnimals];
 });
 
-  
+
+
+
+
+let schoolWalk = ["No pets allowed at school! You got kicked out!","Congrats! Your dog graduated!"]
+const school = document.querySelector("#school");
+let box = document.getElementById("box");
+
+    school.addEventListener ("click", (event) => { 
+      let randomMath = Math.floor(Math.random() * schoolWalk.length);
+     box.textContent = schoolWalk [randomMath];
+});
+
+let mailWalk = ["Oh no! Your dog started to chase the Mailman!","Hooray! Successfully picked up your package!"]
+const postOffice = document.querySelector("#postOffice");
+let box2 = document.getElementById("box2");
+
+    postOffice.addEventListener ("click", (event) => { 
+      let randomMath = Math.floor(Math.random() * mailWalk.length);
+     box2.textContent = mailWalk [randomMath];
+});
+
+let hospWalk = ["Your dog started to howl along with the sirens!","You visited a patient and your dog cheered them up!"]
+const hospital = document.querySelector("#hospital");
+let box3 = document.getElementById("box3");
+
+    hospital.addEventListener ("click", (event) => { 
+      let randomMath = Math.floor(Math.random() * hospWalk.length);
+     box3.textContent = hospWalk [randomMath];
+});
+
+
 </script>
     
   </body>
